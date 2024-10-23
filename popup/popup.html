@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="popup-header">
+        <button id="closeButton" class="close-button">✕</button>
+      </div>
+
+      <div class="status-container">
+        <span class="status-label">Page Support Status:</span>
+        <div id="supportStatus" class="status-indicator"></div>
+      </div>
+
+      <button id="extractButton" disabled>Extract Article</button>
+
+      <div class="progress-container">
+        <div id="progressBar" class="progress-bar">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+        <span id="progressText" class="progress-text"></span>
+      </div>
+
+      <pre id="extractedContent"></pre>
+
+      <div class="button-container">
+        <button id="copyButton" disabled>Copy to Clipboard</button>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

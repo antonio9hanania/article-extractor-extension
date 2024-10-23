@@ -1,0 +1,131 @@
+.status-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.status-label {
+  margin-right: 8px;
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.status-indicator.supported {
+  background-color: #4caf50;
+}
+
+.status-indicator.unsupported {
+  background-color: #f44336;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2196f3;
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.progress-container {
+  margin-bottom: 16px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: #f5f5f5;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background-color: #2196f3;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #666;
+}
+
+#extractedContent {
+  width: 100%;
+  height: 300px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-y: auto;
+  direction: rtl;
+  text-align: right;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  width: 400px;
+  padding: 16px;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: flex-end;
+  margin: -16px -16px 8px -16px;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  background: #f8f8f8;
+}
+
+.close-button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  color: #666;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.close-button:hover {
+  background: #eee;
+  color: #333;
+}
+
+/* Ensure popup stays on top */
+body {
+  margin: 0;
+  padding: 0;
+}
