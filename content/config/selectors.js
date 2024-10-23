@@ -80,6 +80,7 @@ const selectors = {
       "#comments",
       ".comments-section",
       ".response",
+      ".talkback",
 
       // Media elements
       "figcaption",
