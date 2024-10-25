@@ -89,6 +89,7 @@ const selectors = {
       ".credit",
       ".image-credit",
       ".photo-credit",
+      ".trinity",
 
       // Related content
       '[class*="related"]',
