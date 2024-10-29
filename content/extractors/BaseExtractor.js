@@ -52,10 +52,87 @@ class BaseExtractor {
 
   removeUnwantedElements(element) {
     const clone = element.cloneNode(true);
+
+    // Apply general selectors
     window.selectors.articleSelectors.unwantedElements.forEach((selector) => {
       clone.querySelectorAll(selector).forEach((el) => el.remove());
     });
+
+    // Apply site-specific rules
+    const siteRules = window.siteRules?.getRulesForSite(window.location.href);
+    if (siteRules) {
+      if (siteRules.removeSelectors) {
+        siteRules.removeSelectors.forEach((selector) => {
+          if (typeof selector === "string") {
+            // Handle regular CSS selectors
+            clone.querySelectorAll(selector).forEach((el) => el.remove());
+          } else if (typeof selector === "function") {
+            // Handle function-based selectors
+            this.removeElementsByFunction(clone, selector);
+          }
+        });
+      }
+
+      // Apply site-specific cleaning rules
+      if (siteRules.cleanRules?.removePatterns) {
+        this.applySiteSpecificCleaning(clone, siteRules.cleanRules);
+      }
+    }
+
     return clone;
+  }
+
+  removeElementsByFunction(element, testFunction) {
+    const walker = document.createTreeWalker(
+      element,
+      NodeFilter.SHOW_ELEMENT,
+      null,
+      false
+    );
+
+    const elementsToRemove = [];
+    let currentNode = walker.nextNode();
+
+    while (currentNode) {
+      if (testFunction(currentNode)) {
+        elementsToRemove.push(currentNode);
+      }
+      currentNode = walker.nextNode();
+    }
+
+    elementsToRemove.forEach((node) => node.remove());
+  }
+
+  applySiteSpecificCleaning(element, cleanRules) {
+    const removePatterns = cleanRules.removePatterns || [];
+
+    const walker = document.createTreeWalker(
+      element,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
+    );
+
+    const textsToClean = [];
+    let currentNode = walker.nextNode();
+
+    while (currentNode) {
+      if (
+        removePatterns.some((pattern) => pattern.test(currentNode.textContent))
+      ) {
+        textsToClean.push(currentNode);
+      }
+      currentNode = walker.nextNode();
+    }
+
+    textsToClean.forEach((node) => {
+      const parent = node.parentNode;
+      if (parent && parent.childNodes.length === 1) {
+        parent.remove(); // Remove entire element if it only contains matched text
+      } else {
+        node.remove(); // Otherwise just remove the text node
+      }
+    });
   }
 
   isValidContent(text) {

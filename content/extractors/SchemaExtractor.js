@@ -2,7 +2,7 @@ class SchemaExtractor extends BaseExtractor {
   constructor() {
     super();
     this.name = "schema";
-    this.priority = 3;
+    this.priority = 4;
   }
 
   async extract() {

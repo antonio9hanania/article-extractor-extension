@@ -24,6 +24,7 @@
         "content/config/cleaners.js",
         "content/config/patterns.js",
         "content/config/selectors.js",
+        "content/config/site-rules.js",
         "libs/readability.js",
         "content/extractors/BaseExtractor.js",
         "content/extractors/ReadabilityExtractor.js",

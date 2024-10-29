@@ -52,12 +52,16 @@ const selectors = {
       '[role="navigation"]',
       ".menu",
       ".navbar",
+      "#bookmark-toast",
+      ".header__container",
 
       // Sidebars
       "aside",
+      ".recirculation__text",
       '[role="complementary"]',
       ".sidebar",
       ".widget-area",
+      ".preview-header",
 
       // Social & Sharing
       '[class*="social"]',
@@ -81,6 +85,7 @@ const selectors = {
       ".comments-section",
       ".response",
       ".talkback",
+      "#spotim-container",
 
       // Media elements
       "figcaption",
@@ -90,18 +95,30 @@ const selectors = {
       ".image-credit",
       ".photo-credit",
       ".trinity",
+      ".live-story-lede",
 
       // Related content
       '[class*="related"]',
       '[class*="recommended"]',
       ".more-articles",
       ".suggested",
+      ".recommender-articles",
+      ".read-next-recommended",
+      ".related-column",
+      ".article-preview-container preview-right",
+      ".article-preview",
 
       // Utility
       '[class*="tags"]',
       '[class*="meta"]',
       '[class*="utility"]',
       '[class*="toolbar"]',
+
+      // Newsletter & Subscribe
+      ".email__toaster-component out-of-view",
+      ".privacy",
+      "#Mirror-DailyNewsletter",
+      ".email-slidein-form-container",
 
       // Newsletter & Subscribe
       '[class*="newsletter"]',

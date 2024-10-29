@@ -2,7 +2,7 @@ class OpenGraphExtractor extends BaseExtractor {
   constructor() {
     super();
     this.name = "opengraph";
-    this.priority = 2;
+    this.priority = 3;
   }
 
   async extract() {
