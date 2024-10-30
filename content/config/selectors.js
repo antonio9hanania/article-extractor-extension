@@ -114,6 +114,7 @@ const selectors = {
       ".article-preview",
       ".not-for-print",
       ".bottom-of-article",
+      ".js-magnet-data",
 
       // Utility
       '[class*="tags"]',
