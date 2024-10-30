@@ -78,6 +78,9 @@ const selectors = {
       '[class*="sponsored"]',
       ".promoted",
       ".advertisement",
+      "#browsi_adWrapper_ai_2_ati_1_rc_0",
+      "#browsi_adWrapper_ai_2_ati_1_rc_1",
+      "#Taboola-inline-video",
 
       // Comments
       '[class*="comment"]',
@@ -110,6 +113,7 @@ const selectors = {
       ".article-preview-container preview-right",
       ".article-preview",
       ".not-for-print",
+      ".bottom-of-article",
 
       // Utility
       '[class*="tags"]',
@@ -135,6 +139,7 @@ const selectors = {
       '[class*="date"]',
       ".timestamp",
       ".published",
+      ".originalLaunchDate",
 
       // Site-specific elements
       '[class*="cookie"]',
