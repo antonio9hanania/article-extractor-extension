@@ -96,6 +96,8 @@ const selectors = {
       ".photo-credit",
       ".trinity",
       ".live-story-lede",
+      ".featured featured-video video-ct",
+      ".featured-video",
 
       // Related content
       '[class*="related"]',
@@ -107,6 +109,7 @@ const selectors = {
       ".related-column",
       ".article-preview-container preview-right",
       ".article-preview",
+      ".not-for-print",
 
       // Utility
       '[class*="tags"]',
