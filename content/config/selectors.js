@@ -101,6 +101,8 @@ const selectors = {
       ".live-story-lede",
       ".featured featured-video video-ct",
       ".featured-video",
+      '[class^="ArticleAudio_"]',
+      '[class^="ArticleRelatedContentLink_"]',
 
       // Related content
       '[class*="related"]',
