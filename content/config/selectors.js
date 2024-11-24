@@ -16,6 +16,7 @@ const selectors = {
       "#article-text",
       ".article-text",
       ".story-content",
+      ".news_body",
     ],
 
     title: [
@@ -62,6 +63,8 @@ const selectors = {
       ".sidebar",
       ".widget-area",
       ".preview-header",
+      '[class*="offcanvas"]',
+      '[class*="main_infoblock"]',
 
       // Social & Sharing
       '[class*="social"]',
@@ -71,6 +74,7 @@ const selectors = {
 
       // Ads
       '[class*="ad-"]',
+      '[class*="ad_"]',
       '[class*="ads-"]',
       '[id*="ad-"]',
       '[id*="ads-"]',
@@ -89,6 +93,7 @@ const selectors = {
       ".response",
       ".talkback",
       "#spotim-container",
+      '[class*="main_feedbacks"]',
 
       // Media elements
       "figcaption",
@@ -117,24 +122,27 @@ const selectors = {
       ".not-for-print",
       ".bottom-of-article",
       ".js-magnet-data",
+      ".main_news_relations",
+      ".news_relations_blocks",
+      ".dynamic_news",
 
       // Utility
       '[class*="tags"]',
       '[class*="meta"]',
       '[class*="utility"]',
       '[class*="toolbar"]',
+      "script",
 
       // Newsletter & Subscribe
       ".email__toaster-component out-of-view",
       ".privacy",
       "#Mirror-DailyNewsletter",
       ".email-slidein-form-container",
-
-      // Newsletter & Subscribe
       '[class*="newsletter"]',
       '[class*="subscribe"]',
       ".subscription",
       ".mailing-list",
+      '[class*="banners"]',
 
       // Time & Date
       "time",
